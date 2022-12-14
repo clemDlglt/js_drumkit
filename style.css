@@ -1,6 +1,19 @@
+:root {
+    font-family: sans-serif;
+}
+
 body {
+    background-color: rgb(25, 25, 25);
     margin: 0;
+}
+
+h1 {
+    color: white
+}
+
+.wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -8,16 +21,26 @@ body {
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
 }
 
 .sample {
-    background-color: darkslategray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(60, 60, 60);
     color: white;
-    margin: 10px;
     height: 300px;
     width: 300px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px 0 black;
+}
+
+.sample span:first-child {
+    font-size: 2rem;
 }
 
 .playing {
-    background-color: lightslategray;
+    background-color: rgb(80, 80, 80);
 }
