@@ -57,18 +57,14 @@ class Sample {
     }
 
     setListener() {
-        window.addEventListener('keypress', (event) => {
-            this.play();
-        });
-
-        this.sound.addEventListener('ended', () => {
-            this.playing = false;
-        });
+        window.addEventListener('keypress', (event) => this.play(event));
+        this.sound.addEventListener('ended', () => this.playing = false);
     }
 
-    play() {
+    play(event) {
         if (event.key != this.key) return;
 
+        this.sound.load();
         this.sound.play();
         this.playing = true;
     }
